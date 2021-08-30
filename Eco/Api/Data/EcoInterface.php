@@ -10,7 +10,7 @@ interface EcoInterface {
   /**
    * @return int
    */
-  public function getProductId(): int;
+  public function getProductId(): ?int;
 
   /**
    * @param int $productId
@@ -20,9 +20,9 @@ interface EcoInterface {
   public function setProductId(int $productId);
 
   /**
-   * @return string
+   * @return string|null
    */
-  public function getMaterial(): string;
+  public function getMaterial(): ?string;
 
   /**
    * @param string $material
@@ -32,9 +32,9 @@ interface EcoInterface {
   public function setMaterial(string $material);
 
   /**
-   * @return string
+   * @return string|null
    */
-  public function getColor(): string;
+  public function getColor(): ?string;
 
   /**
    * @param string $color

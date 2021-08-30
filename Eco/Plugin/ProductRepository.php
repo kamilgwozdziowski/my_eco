@@ -29,8 +29,14 @@ class ProductRepository {
     }
 
     /** @var EcoInterface $ecoExtension */
-    $ecoExtension = $this->ecoRepository->getEcoByProductId(1);
-    $extensionAttributes->setEco($ecoExtension);
+    $eco = $this->ecoRepository->getEcoByProductId(1);
+    if(!$eco->isEmpty())
+    {
+      $extensionAttributes->setEco($eco);
+    }
+
+    $ecos = $this->ecoRepository->getEcoProducts(1);
+    $extensionAttributes->setEcos($ecos);
 
     $result->setExtensionAttributes($extensionAttributes);
     return $result;

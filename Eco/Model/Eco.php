@@ -31,7 +31,7 @@ class Eco extends AbstractModel implements IdentityInterface, EcoInterface {
     return $values;
   }
 
-  public function getProductId(): int {
+  public function getProductId(): ?int {
     return $this->getData(self::PRODUCT_ID);
   }
 
@@ -39,7 +39,7 @@ class Eco extends AbstractModel implements IdentityInterface, EcoInterface {
     $this->setData(self::PRODUCT_ID, $productId);
   }
 
-  public function getMaterial(): string {
+  public function getMaterial(): ?string {
     return $this->getData(self::MATERIAL);
   }
 
@@ -47,7 +47,7 @@ class Eco extends AbstractModel implements IdentityInterface, EcoInterface {
     $this->setData(self::MATERIAL, $material);
   }
 
-  public function getColor(): string {
+  public function getColor(): ?string {
     return $this->getData(self::COLOR);
   }
 

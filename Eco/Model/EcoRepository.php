@@ -26,4 +26,9 @@ class EcoRepository implements EcoRepositoryInterface {
     return $ecoCollection->addFieldToFilter('product_id', ['eq' => $productId])->getLastItem();
   }
 
+  public function getEcoProducts(int $productId): array {
+    $ecoCollection = $this->ecoCollection->create();
+    return $ecoCollection->addFieldToFilter('product_id', ['eq' => $productId])->getItems();
+  }
+
 }
