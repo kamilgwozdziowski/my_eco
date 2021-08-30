@@ -1,0 +1,15 @@
+<?php
+/** @var $block \My\Eco\Block\Index */
+
+/** @var \My\Eco\Api\Data\EcoInterface $material */
+$material = $block->getByProduct(1);
+?>
+
+<h3>Eco</h3>
+<?php foreach ($block->getEco() as $eco): ?>
+    <p>Material: <?= $eco->getMaterial() ?>, Color: <?= $eco->getColor() ?></p>
+<?php endforeach; ?>
+
+<?= $material->getColor(); ?> <?= $material->getMaterial() ?>
+
+
