@@ -6,4 +6,13 @@
     </type>
     <preference for="My\Eco\Api\Data\EcoInterface" type="My\Eco\Model\Eco"/>
     <preference for="My\Eco\Api\EcoRepositoryInterface" type="My\Eco\Model\EcoRepository"/>
+
+    <!-- Console -->
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="my_eco_console" xsi:type="object">My\Eco\Console\Command\Eco</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
