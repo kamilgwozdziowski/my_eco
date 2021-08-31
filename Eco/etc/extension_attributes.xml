@@ -7,4 +7,11 @@
     <extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">
         <attribute code="ecos" type="My\Eco\Api\Data\EcoInterface[]"/>
     </extension_attributes>
+
+    <extension_attributes for="Magento\Quote\Api\Data\CartInterface">
+        <attribute code="testfield" type="string" />
+    </extension_attributes>
+    <extension_attributes for="Magento\Sales\Api\Data\OrderInterface">
+        <attribute code="testfield" type="string" />
+    </extension_attributes>
 </config>

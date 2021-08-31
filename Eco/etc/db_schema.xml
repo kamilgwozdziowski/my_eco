@@ -11,4 +11,12 @@
             <column name="entity_id"/>
         </constraint>
     </table>
+
+    <table name="quote">
+        <column xsi:type="varchar" length="128" nullable="true" name="testfield" comment="Test Field"/>
+    </table>
+    <table name="sales_order">
+        <column xsi:type="varchar" length="128" nullable="true" name="testfield" comment="Test Field"/>
+    </table>
+
 </schema>
