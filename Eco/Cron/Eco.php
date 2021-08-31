@@ -16,7 +16,7 @@ class Eco {
 
   public function execute()
   {
-    $this->logger->info('Logger AAA');
+    $this->logger->info('Logger CRON Eco');
 
     return $this;
   }

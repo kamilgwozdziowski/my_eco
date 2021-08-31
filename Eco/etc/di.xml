@@ -16,4 +16,28 @@
             </argument>
         </arguments>
     </type>
+
+    <!-- Custom logger -->
+    <virtualType name="My\Eco\Model\Method\Debug" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/eco.log</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="My\Eco\Model\Method\Logger" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">My\Eco\Model\Method\Debug</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="My\Eco\Console\Command\Eco">
+        <arguments>
+            <argument name="logger" xsi:type="object">My\Eco\Model\Method\Logger</argument>
+        </arguments>
+    </type>
+    <type name="My\Eco\Cron\Eco">
+        <arguments>
+            <argument name="logger" xsi:type="object">My\Eco\Model\Method\Logger</argument>
+        </arguments>
+    </type>
 </config>
