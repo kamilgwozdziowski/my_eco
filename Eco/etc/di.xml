@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--  Api Repository  -->
     <type name="Magento\Catalog\Api\ProductRepositoryInterface">
         <plugin name="product_eco" type="My\Eco\Plugin\ProductRepository" sortOrder="1"/>
     </type>
